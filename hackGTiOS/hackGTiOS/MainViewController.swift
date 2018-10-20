@@ -8,20 +8,100 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
-
+class MainViewController: UIViewController, BeaconScannerDelegate {
+    
+    
+    //variables
     @IBOutlet var MainViewController: UIView!
     
     @IBOutlet weak var scheduleButton: UIButton!
     @IBOutlet weak var currentPatient: UIButton!
     @IBOutlet weak var nextPatientButton: UIButton!
     
+    // Beacon Scanner vars
+    var beaconScanner: BeaconScanner!
+    var txPower = -58.0
+    var maxAcceptableDistance = 3.0
+    var distance_dictionaries: [String:[Double]] = [:]
+    var sum_of_distances: [String:Double] = [:]
+    
+    // main funcs
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpViews()
         setUpButtonViews()
-
+        self.hideKeyboardWhenTappedAround()
+        
+        self.beaconScanner = BeaconScanner()
+        self.beaconScanner!.delegate = self
+        self.beaconScanner!.startScanning()
         // Do any additional setup after loading the view.
+    }
+    
+    //Beacon Code
+    func didFindBeacon(beaconScanner: BeaconScanner, beaconInfo: BeaconInfo) {
+        NSLog("FIND: %@", beaconInfo.description)
+    }
+    
+    func didLoseBeacon(beaconScanner: BeaconScanner, beaconInfo: BeaconInfo) {
+        NSLog("FIND: %@", beaconInfo.description)
+    }
+    
+    func didUpdateBeacon(beaconScanner: BeaconScanner, beaconInfo: BeaconInfo) {
+        NSLog("FIND: %@", beaconInfo.description)
+    }
+    
+    func didObserveURLBeacon(beaconScanner: BeaconScanner, URL: NSURL, RSSI: Int) {
+        let distance = getDistance(rssi: RSSI, txPower: self.txPower)
+        
+        //if the distance is absurd return
+        if(distance >= maxAcceptableDistance){
+            return;
+        }
+        
+        let beacon_name = URL.absoluteString!
+        
+        //creating an entry in distance_dictionary if it doesn't exist
+        if distance_dictionaries[beacon_name] == nil {
+            distance_dictionaries[beacon_name] = [distance]
+            sum_of_distances[beacon_name] = 0.0
+        } else {
+            //else appends distance to the distance array
+            distance_dictionaries[beacon_name]?.append(distance)
+        }
+        
+        // **important** if you are next to the beacon the following executes
+        if distance <= 0.2 {
+            print("close!")
+        }
+        
+        // averaging the distances on the distance array
+        if(distance_dictionaries[beacon_name]!.count >= 5){
+            sum_of_distances[beacon_name]! -=  distance_dictionaries[beacon_name]![distance_dictionaries[beacon_name]!.count - 5]
+        }
+        distance_dictionaries[beacon_name]!.append(distance)
+        sum_of_distances[beacon_name]! += distance
+        print(sum_of_distances[beacon_name]!)
+        
+        if(distance_dictionaries[beacon_name]!.count>=6){
+            print("URL SEEN: \(URL), RSSI: \(RSSI), Distance: \(sum_of_distances[beacon_name]! / 5)")
+        }
+    }
+    
+    //auxiliary cord
+    func getDistance(rssi: Int, txPower: Double) -> Double {
+        if (rssi == 0) {
+            return -1.0; // if we cannot determine accuracy, return -1.
+        }
+        
+        let ratio = (Double(rssi))/txPower;
+        if (ratio < 1.0) {
+            return Double(pow(ratio,10));
+        }
+        else {
+            let accuracy =  (0.89976)*pow(ratio,7.7095) + 0.111;
+            return accuracy;
+        }
     }
     
     func setUpViews() {
