@@ -11,7 +11,6 @@ import UIKit
 class customCell: UITableViewCell{
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var eventLabel: UILabel!
-    
 }
 
 class ScheduleViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
