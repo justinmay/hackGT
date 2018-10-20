@@ -11,7 +11,6 @@ import UIKit
 class customPatientCell: UITableViewCell{
     @IBOutlet weak var type: UILabel!
     @IBOutlet weak var info: UILabel!
-    @IBOutlet weak var customPatientCellView: UIView!
 }
 
 class customLargeCell: UITableViewCell {
@@ -31,9 +30,6 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
             let cell = tableView.dequeueReusableCell(withIdentifier: "patientInfoCell", for: indexPath) as! customPatientCell
             cell.type?.text = data.0
             cell.info?.text = data.1
-            cell.customPatientCellView.layer.cornerRadius = 5
-            cell.customPatientCellView.layer.borderWidth = 1
-            cell.customPatientCellView.layer.borderColor = UIColor(red:0.13, green:0.89, blue:0.70, alpha:1.0).cgColor
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "pathCell", for: indexPath) as! customLargeCell
@@ -62,7 +58,6 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
                             ("Smoker", "Y"),
                             ("Family History", "Diabetes, Melanoma"),
                             ("Immunization", "Antivaxxer"),
-                            ("Prior Surgery", "your mom"),
                             ("Pathology Results", "There are focal areas of suprabasal clefting and a few acantholytic cells are seen. There is villous formation and individual dyskreatotic cells are present in the upper layers of the epidermis")
                             ]
     
