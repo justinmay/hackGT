@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A8A05FD0217BA23900A97B06 /* Beacon Detection in Resources */ = {isa = PBXBuildFile; fileRef = A8A05FCF217BA23900A97B06 /* Beacon Detection */; };
 		CB35CE60217AE81A004E83A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB35CE5F217AE81A004E83A6 /* AppDelegate.swift */; };
 		CB35CE62217AE81A004E83A6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB35CE61217AE81A004E83A6 /* ViewController.swift */; };
 		CB35CE65217AE81A004E83A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB35CE63217AE81A004E83A6 /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A8A05FCF217BA23900A97B06 /* Beacon Detection */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Beacon Detection"; sourceTree = "<group>"; };
 		CB35CE5C217AE81A004E83A6 /* hackGTiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hackGTiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB35CE5F217AE81A004E83A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB35CE61217AE81A004E83A6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 		CB35CE5E217AE81A004E83A6 /* hackGTiOS */ = {
 			isa = PBXGroup;
 			children = (
+				A8A05FCF217BA23900A97B06 /* Beacon Detection */,
 				CB35CE5F217AE81A004E83A6 /* AppDelegate.swift */,
 				CB35CE61217AE81A004E83A6 /* ViewController.swift */,
 				CB35CE8F217AF011004E83A6 /* MainViewController.swift */,
@@ -241,6 +244,7 @@
 				CB35CE6A217AE81C004E83A6 /* LaunchScreen.storyboard in Resources */,
 				CB35CE67217AE81C004E83A6 /* Assets.xcassets in Resources */,
 				CB35CE65217AE81A004E83A6 /* Main.storyboard in Resources */,
+				A8A05FD0217BA23900A97B06 /* Beacon Detection in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,13 +449,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = F8D8S8BR4K;
+				DEVELOPMENT_TEAM = G3C7HTN75X;
 				INFOPLIST_FILE = hackGTiOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.hackGTiOS;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.hackGTiOS2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -463,13 +467,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = F8D8S8BR4K;
+				DEVELOPMENT_TEAM = G3C7HTN75X;
 				INFOPLIST_FILE = hackGTiOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.hackGTiOS;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.hackGTiOS2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
