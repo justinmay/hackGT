@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0FF51C849CC16FD056386AB7 /* Pods_hackGTiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05A843DB375C701BA8E4C0F5 /* Pods_hackGTiOS.framework */; };
+		402EB90D2F463E0E5B6F3C1B /* Pods_hackGTiOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B202E94092EDF1EDFBBDCE9 /* Pods_hackGTiOSTests.framework */; };
 		A8A05FD0217BA23900A97B06 /* Beacon Detection in Resources */ = {isa = PBXBuildFile; fileRef = A8A05FCF217BA23900A97B06 /* Beacon Detection */; };
 		CB35CE60217AE81A004E83A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB35CE5F217AE81A004E83A6 /* AppDelegate.swift */; };
 		CB35CE62217AE81A004E83A6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB35CE61217AE81A004E83A6 /* ViewController.swift */; };
@@ -18,6 +20,7 @@
 		CB35CE90217AF011004E83A6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB35CE8F217AF011004E83A6 /* MainViewController.swift */; };
 		CB35CE92217B5021004E83A6 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB35CE91217B5020004E83A6 /* ScheduleViewController.swift */; };
 		CB35CE94217B646D004E83A6 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB35CE93217B646D004E83A6 /* ProfileViewController.swift */; };
+		E439F3EA37AF21582B7647F5 /* Pods_hackGTiOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B79C0D2DC99D1EF87ABA479 /* Pods_hackGTiOSUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +41,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		05A843DB375C701BA8E4C0F5 /* Pods_hackGTiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hackGTiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B202E94092EDF1EDFBBDCE9 /* Pods_hackGTiOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hackGTiOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2EF9BEFC80CD88D0E28305EC /* Pods-hackGTiOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hackGTiOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-hackGTiOSTests/Pods-hackGTiOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4F58E6D6713466233D41AF25 /* Pods-hackGTiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hackGTiOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-hackGTiOS/Pods-hackGTiOS.release.xcconfig"; sourceTree = "<group>"; };
+		620730BF6B2686159E328E3E /* Pods-hackGTiOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hackGTiOSUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-hackGTiOSUITests/Pods-hackGTiOSUITests.release.xcconfig"; sourceTree = "<group>"; };
+		9B79C0D2DC99D1EF87ABA479 /* Pods_hackGTiOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hackGTiOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8A05FCF217BA23900A97B06 /* Beacon Detection */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Beacon Detection"; sourceTree = "<group>"; };
 		CB35CE5C217AE81A004E83A6 /* hackGTiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hackGTiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB35CE5F217AE81A004E83A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +64,9 @@
 		CB35CE8F217AF011004E83A6 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		CB35CE91217B5020004E83A6 /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
 		CB35CE93217B646D004E83A6 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		E0D4B3D9EE432218AB8FA1B7 /* Pods-hackGTiOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hackGTiOSUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-hackGTiOSUITests/Pods-hackGTiOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E579A32B32A572444DB9BD8D /* Pods-hackGTiOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hackGTiOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-hackGTiOSTests/Pods-hackGTiOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		EC0A03CFAFD949B187E1EAF9 /* Pods-hackGTiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hackGTiOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-hackGTiOS/Pods-hackGTiOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FF51C849CC16FD056386AB7 /* Pods_hackGTiOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				402EB90D2F463E0E5B6F3C1B /* Pods_hackGTiOSTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,12 +90,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E439F3EA37AF21582B7647F5 /* Pods_hackGTiOSUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01DF97D4E0590A1B537D52BE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EC0A03CFAFD949B187E1EAF9 /* Pods-hackGTiOS.debug.xcconfig */,
+				4F58E6D6713466233D41AF25 /* Pods-hackGTiOS.release.xcconfig */,
+				2EF9BEFC80CD88D0E28305EC /* Pods-hackGTiOSTests.debug.xcconfig */,
+				E579A32B32A572444DB9BD8D /* Pods-hackGTiOSTests.release.xcconfig */,
+				E0D4B3D9EE432218AB8FA1B7 /* Pods-hackGTiOSUITests.debug.xcconfig */,
+				620730BF6B2686159E328E3E /* Pods-hackGTiOSUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		93CC628D9220CBD5DDFFAB92 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				05A843DB375C701BA8E4C0F5 /* Pods_hackGTiOS.framework */,
+				0B202E94092EDF1EDFBBDCE9 /* Pods_hackGTiOSTests.framework */,
+				9B79C0D2DC99D1EF87ABA479 /* Pods_hackGTiOSUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CB35CE53217AE81A004E83A6 = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +127,8 @@
 				CB35CE73217AE81C004E83A6 /* hackGTiOSTests */,
 				CB35CE7E217AE81C004E83A6 /* hackGTiOSUITests */,
 				CB35CE5D217AE81A004E83A6 /* Products */,
+				01DF97D4E0590A1B537D52BE /* Pods */,
+				93CC628D9220CBD5DDFFAB92 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -144,9 +184,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CB35CE84217AE81C004E83A6 /* Build configuration list for PBXNativeTarget "hackGTiOS" */;
 			buildPhases = (
+				CD73193C3CE2B83A901D035D /* [CP] Check Pods Manifest.lock */,
 				CB35CE58217AE81A004E83A6 /* Sources */,
 				CB35CE59217AE81A004E83A6 /* Frameworks */,
 				CB35CE5A217AE81A004E83A6 /* Resources */,
+				8D8CBFE451E990374571F72B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -161,6 +203,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CB35CE87217AE81C004E83A6 /* Build configuration list for PBXNativeTarget "hackGTiOSTests" */;
 			buildPhases = (
+				629C1EBA7F190E63CE42A9AF /* [CP] Check Pods Manifest.lock */,
 				CB35CE6C217AE81C004E83A6 /* Sources */,
 				CB35CE6D217AE81C004E83A6 /* Frameworks */,
 				CB35CE6E217AE81C004E83A6 /* Resources */,
@@ -179,6 +222,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CB35CE8A217AE81C004E83A6 /* Build configuration list for PBXNativeTarget "hackGTiOSUITests" */;
 			buildPhases = (
+				D431012A138DFA00319CAD3F /* [CP] Check Pods Manifest.lock */,
 				CB35CE77217AE81C004E83A6 /* Sources */,
 				CB35CE78217AE81C004E83A6 /* Frameworks */,
 				CB35CE79217AE81C004E83A6 /* Resources */,
@@ -263,6 +307,85 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		629C1EBA7F190E63CE42A9AF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-hackGTiOSTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8D8CBFE451E990374571F72B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-hackGTiOS/Pods-hackGTiOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-hackGTiOS/Pods-hackGTiOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CD73193C3CE2B83A901D035D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-hackGTiOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D431012A138DFA00319CAD3F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-hackGTiOSUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CB35CE58217AE81A004E83A6 /* Sources */ = {
@@ -446,15 +569,13 @@
 		};
 		CB35CE85217AE81C004E83A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC0A03CFAFD949B187E1EAF9 /* Pods-hackGTiOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G3C7HTN75X;
 				INFOPLIST_FILE = hackGTiOS/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.hackGTiOS2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -464,15 +585,13 @@
 		};
 		CB35CE86217AE81C004E83A6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F58E6D6713466233D41AF25 /* Pods-hackGTiOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G3C7HTN75X;
 				INFOPLIST_FILE = hackGTiOS/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.hackGTiOS2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -482,17 +601,14 @@
 		};
 		CB35CE88217AE81C004E83A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2EF9BEFC80CD88D0E28305EC /* Pods-hackGTiOSTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F8D8S8BR4K;
 				INFOPLIST_FILE = hackGTiOSTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.hackGTiOSTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -503,17 +619,14 @@
 		};
 		CB35CE89217AE81C004E83A6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E579A32B32A572444DB9BD8D /* Pods-hackGTiOSTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F8D8S8BR4K;
 				INFOPLIST_FILE = hackGTiOSTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.hackGTiOSTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -524,16 +637,13 @@
 		};
 		CB35CE8B217AE81C004E83A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E0D4B3D9EE432218AB8FA1B7 /* Pods-hackGTiOSUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F8D8S8BR4K;
 				INFOPLIST_FILE = hackGTiOSUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.hackGTiOSUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -544,16 +654,13 @@
 		};
 		CB35CE8C217AE81C004E83A6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 620730BF6B2686159E328E3E /* Pods-hackGTiOSUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F8D8S8BR4K;
 				INFOPLIST_FILE = hackGTiOSUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.hackGTiOSUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
