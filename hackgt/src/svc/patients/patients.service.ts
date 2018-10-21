@@ -12,6 +12,7 @@ export class PatientsService {
 
     getPatientData(userid : String) : Promise<any> {
         return new Promise(function(resolve, reject) {
+            console.log(userid)
             PatientData.findOne({userid: userid}).then((data) => {
                 User.findById(userid, (err, user) => {
                     var stuff = JSON.parse(JSON.stringify(data))
