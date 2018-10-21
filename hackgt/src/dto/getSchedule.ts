@@ -1,3 +1,3 @@
 export class GetScheduleDto {
-    doctorid : String;
+    readonly doctorid : String;
 }

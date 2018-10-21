@@ -1,6 +1,7 @@
 export interface PatientDataInterface {
+    userid : String,
     sex : string,
-    dob : Date,
+    dob : String,
     allergies : string[],
     smoker : string,
     family : string[],

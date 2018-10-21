@@ -1,7 +1,7 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import * as socketio from 'socket.io';
-
+import * as express from 'express';
 import * as mongoose from "mongoose";
 
 function setUpMongoDB(host : String, port: Number, database : String) {
@@ -14,12 +14,12 @@ function setUpMongoDB(host : String, port: Number, database : String) {
 var socket = null;
 
 async function bootstrap() {
-  const app = await NestFactory.create(AppModule);
-
-  const io = socketio(app);
+  const sedsrver = express();
+  const app = await NestFactory.create(AppModule, sedsrver);
+  const io = socketio(app.getHttpServer());
   io.on('connection', function(sock) {
     socket = sock;
-  })
+  });
 
   setUpMongoDB("mongodb://localhost", 27017, "hackgt");
 

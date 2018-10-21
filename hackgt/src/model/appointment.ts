@@ -5,7 +5,6 @@ import { AppointmentInterface } from "./interfaces/appointment";
 export interface AppointmentModel extends AppointmentInterface, Document {}
 
 export var AppointmentSchema : Schema = new Schema({
-    time: Date,
     location: String,
     userid: String,
     doctorid: String

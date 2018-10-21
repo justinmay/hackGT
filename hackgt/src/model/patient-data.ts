@@ -5,8 +5,9 @@ import { PatientDataInterface } from "./interfaces/patient-data";
 export interface PatientDataModel extends PatientDataInterface, Document { }
 
 export var PatientDataSchema : Schema = new Schema({
+    userid : String,
     sex : String,
-    dob : Date,
+    dob : String,
     allergies : [String],
     smoker : String,
     family :  [String],
