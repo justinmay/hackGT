@@ -1,0 +1,6 @@
+framework module Pods_hackGTiOSTests {
+  umbrella header "Pods-hackGTiOSTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

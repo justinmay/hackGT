@@ -7,13 +7,19 @@
 //
 
 import UIKit
+import Alamofire
 
 class MainViewController: UIViewController, BeaconScannerDelegate {
     
+    var url: String? {
+        return "https://5756a23c.ngrok.io"
+    }
+    
+    var userIds = ["5bcc63bca5404233bc8daa72", "5bcc714aa0368d4b8a4455ff", "5bcc7130a0368d4b8a4455fe"]
+    var isVisited = [false, false, false]
     
     //variables
     @IBOutlet var MainViewController: UIView!
-    
     @IBOutlet weak var scheduleButton: UIButton!
     @IBOutlet weak var currentPatient: UIButton!
     @IBOutlet weak var nextPatientButton: UIButton!
@@ -24,6 +30,7 @@ class MainViewController: UIViewController, BeaconScannerDelegate {
     var maxAcceptableDistance = 3.0
     var distance_dictionaries: [String:[Double]] = [:]
     var sum_of_distances: [String:Double] = [:]
+    var beaconsSearched : [String] = []
     
     // main funcs
     override func viewDidLoad() {
@@ -73,7 +80,118 @@ class MainViewController: UIViewController, BeaconScannerDelegate {
         // **important** if you are next to the beacon the following executes
         if distance <= 0.2 {
             print("close!")
+    
+            var beaconHardDict : [String : String] = [
+                "http://www.justin.com" : "Beacon0",
+                "http://www.aditya.com" : "Beacon1",
+                "http://www.vineeth.com" : "Beacon2",
+                ]
+            
+            if (beaconsSearched.contains(beacon_name)){
+                //print("already there")
+            } else {
+                
+                print(beacon_name)
+                let beaconActualString = beaconHardDict[beacon_name]
+                
+                //dictionary for beacon
+                
+                print(beaconActualString! + " passed")
+                self.beaconsSearched.append(beacon_name)
+                //beaconScanner.stopScanning()
+                
+                if(beacon_name == "http://www.justin.com"){
+                    print("JUSTIN!")
+                    isVisited[0] = true
+                    isVisited[1] = false
+                    isVisited[2] = false
+                    
+                    let parameters : Parameters = [
+                        "userid" : userIds[0]
+                    ]
+                    Alamofire.request(self.url! + "/patients/notify", method: .post, parameters: parameters, encoding: URLEncoding.default).responseString {
+                        (response) in
+                        print(response)
+                        switch response.result {
+                        case .success(let value):
+                            print("lolol")
+                        case .failure(let error):
+                            print("fail")
+                        }
+                    }
+                } else if (beacon_name == "http://www.aditya.com"){
+                    print("ADITYA!")
+                    isVisited[1] = true
+                    isVisited[0] = false
+                    isVisited[2] = false
+                    
+                    let parameters : Parameters = [
+                        "userid" : userIds[1]
+                    ]
+                    
+                    Alamofire.request(self.url! + "/patients/notify", method: .post, parameters: parameters, encoding: URLEncoding.default).responseString {
+                        (response) in
+                        print(response)
+                        switch response.result {
+                        case .success(let value):
+                            print("lolol")
+                        case .failure(let error):
+                            print("fail")
+                        }
+                    }
+                } else if(beacon_name == "http://www.vineeth.com"){
+                    print("VINEETH!")
+                    isVisited[0] = false
+                    isVisited[1] = false
+                    isVisited[2] = true
+
+                    let parameters : Parameters = [
+                        "userid" : userIds[2]
+                    ]
+                    Alamofire.request(self.url! + "/patients/notify", method: .post, parameters: parameters, encoding: URLEncoding.default).responseString {
+                        (response) in
+                        print(response)
+                        switch response.result {
+                        case .success(let value):
+                            print("lolol")
+                        case .failure(let error):
+                            print("fail")
+                        }
+                    }
+                }
+            }
+            
         }
+        
+        if distance >= 1.0 && isVisited.contains(true)  {
+            print("Leaving!")
+            
+            if isVisited[0] {
+                isVisited[0] = false
+                
+            } else if isVisited[1]{
+                isVisited[1] = false
+                
+            } else {
+                isVisited[2] = false
+                
+            }
+            //isVisited = false
+            /*
+            Alamofire.request(self.url! + "/patients/notify", method: .get, encoding: URLEncoding.default).responseString {
+                (response) in
+                print(response)
+                switch response.result {
+                case .success(let value):
+                    print("lolol2")
+                case .failure(let error):
+                    print("fail2")
+                }
+            }
+            */
+        }
+        
+        
         
         // averaging the distances on the distance array
         if(distance_dictionaries[beacon_name]!.count >= 5){
@@ -81,10 +199,9 @@ class MainViewController: UIViewController, BeaconScannerDelegate {
         }
         distance_dictionaries[beacon_name]!.append(distance)
         sum_of_distances[beacon_name]! += distance
-        print(sum_of_distances[beacon_name]!)
-        
+        //print(sum_of_distances[beacon_name]!)
         if(distance_dictionaries[beacon_name]!.count>=6){
-            print("URL SEEN: \(URL), RSSI: \(RSSI), Distance: \(sum_of_distances[beacon_name]! / 5)")
+            //print("URL SEEN: \(URL), RSSI: \(RSSI), Distance: \(sum_of_distances[beacon_name]! / 5)")
         }
     }
     
